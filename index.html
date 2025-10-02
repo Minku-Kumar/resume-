@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minku Kumar - Technology Analyst Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Century Gothic', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+            border-bottom: 3px solid #2e8b57;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #2e8b57;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .main-content {
+            display: flex;
+            min-height: calc(100vh - 140px);
+        }
+
+        .sidebar {
+            width: 300px;
+            background: linear-gradient(135deg, #2e8b57, #228b22);
+            color: white;
+            padding: 30px 20px;
+            box-shadow: inset -5px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px 40px;
+            background-color: white;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content .section-title {
+            color: #2e8b57;
+            border-bottom: 2px solid #2e8b57;
+            border-bottom-color: rgba(46, 139, 87, 0.3);
+        }
+
+        .skills-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .skills-list li:before {
+            content: "•";
+            color: #90EE90;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .education-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .edu-date {
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #90EE90;
+        }
+
+        .edu-degree {
+            font-size: 0.95em;
+            font-weight: 600;
+            margin: 3px 0;
+        }
+
+        .edu-institution {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+
+        .cert-list li:before {
+            content: "✓";
+            color: #90EE90;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .experience-years {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2e8b57;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #2e8b57;
+        }
+
+        .profile-summary {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid #2e8b57;
+            font-size: 0.95em;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .job {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .job:last-child {
+            border-bottom: none;
+        }
+
+        .job-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2e8b57;
+            margin-bottom: 5px;
+        }
+
+        .job-duration {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .job-responsibilities {
+            list-style: none;
+        }
+
+        .job-responsibilities li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.9em;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .job-responsibilities li:before {
+            content: "▶";
+            color: #2e8b57;
+            font-size: 0.8em;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .achievements-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .achievements-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .achievements-list li:before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+
+        .projects-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .projects-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .projects-list li:before {
+            content: "🔧";
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                order: 2;
+            }
+
+            .content {
+                order: 1;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: none;
+            }
+
+            .main-content {
+                display: block;
+            }
+
+            .sidebar {
+                width: 100%;
+                background: #2e8b57;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>MINKU KUMAR</h1>
+            <div class="contact-info">
+                minkukumar508@gmail.com | +91 7017384403 | India
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <section>
+                    <h2 class="section-title">Skills</h2>
+                    <ul class="skills-list">
+                        <li>Python/C++/Java</li>
+                        <li>SQL/Unix/Windows</li>
+                        <li>Snowflake DB</li>
+                        <li>Talend/MySQL</li>
+                        <li>Version Control (GIT/MS Azure DevOps)</li>
+                        <li>Project Management (Clarizen/Jira)</li>
+                        <li>MS Office Suite</li>
+                        <li>CRM/ERP</li>
+                        <li>Salesforce/SAP</li>
+                        <li>ETL processes</li>
+                        <li>Data Studio</li>
+                        <li>AI Prompt Engineering</li>
+                        <li>Customer service</li>
+                        <li>System Administration</li>
+                        <li>Data visualization</li>
+                        <li>NoSQL databases</li>
+                        <li>Cloud transformation</li>
+                        <li>Problem-solving abilities</li>
+                        <li>Stakeholder communication</li>
+                        <li>API integration expertise</li>
+                        <li>IoT</li>
+                        <li>Linux/Raspberry Pi/Arduino</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Education And Training</h2>
+                    <div class="education-item">
+                        <div class="edu-date">10/2020</div>
+                        <div class="edu-degree">Master Of Arts: Psychology</div>
+                        <div class="edu-institution">IGNOU Online</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="edu-date">Current</div>
+                        <div class="edu-degree">Bachelor: Electronics and Communication</div>
+                        <div class="edu-institution">DIT University Dehradun, India</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="edu-date">04/2018</div>
+                        <div class="edu-degree">High School: PCM</div>
+                        <div class="edu-institution">Kendriya Vidyalaya No.2 Gaya</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Certifications</h2>
+                    <ul class="cert-list">
+                        <li>Google Cloud Digital Leader (Nov-2022)</li>
+                        <li>Talend Data Explorer (Sep-2022)</li>
+                        <li>SAP BW Modeling (Internal)</li>
+                        <li>Expert Data Analyst, Forecasting (Dec-2021)</li>
+                        <li>Salesforce Essentials - B2B Marketing Analytics (Jul 2021)</li>
+                        <li>Google Analytics (Dec 2021)</li>
+                        <li>Tableau 10 Essential Training (Jun 2020)</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+                <section>
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience-years">7 Years</div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Profile Summary</h2>
+                    <div class="profile-summary">
+                        Results-driven Technology Analyst with over 5 years of hands-on experience in designing, building and configuring data integration and ETL applications. Trained in Talend ETL and SQL with a proven ability to lead cross-functional teams and deliver projects that make a real impact. I excel at overcoming technical excellence with strong collaboration skills. I thrive on facilitating project milestones, driving efficient solutions, and creating an environment where innovation flourishes. As a Talend Integration Expert, I excel at mapping with the stakeholders at all levels, from leadership positions to hands-on technical roles, and providing the technical expertise that keeps high-performance teams moving forward successfully.
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Work History</h2>
+
+                    <div class="job">
+                        <h3 class="job-title">Infosys (Altnext) - Technology Analyst</h3>
+                        <div class="job-duration">11/2024 - Current</div>
+                        <ul class="job-responsibilities">
+                            <li>Designed and developed Talend jobs in Talend Studio to process a variety of file formats (CSV, XML, JSON, XLSX) from multiple sources such as FTP, SFTP services and flat files, efficiently loading data into Snowflake warehouses or different servers.</li>
+                            <li>Enabled seamless data availability and transformation through data marts and extracted data via APIs (MS Graph, Jira, TMC) to support analytics and reporting needs.</li>
+                            <li>Resolved critical production issues, including data mapping misalignments, integration issues, optimising workflows using subjobs and joblets.</li>
+                            <li>Collaborated closely with cross-functional teams to deliver innovative technical solutions and conducted training sessions to empower staff on new Talend and Snowflake technologies.</li>
+                            <li>Led client communications to ensure clear alignment on project goals and timelines.</li>
+                            <li>Developed and implemented a data integration interface for a new location in RFG, integrating data exchange between warehouses.</li>
+                            <li>Authored comprehensive documentation for processes and system configurations to support ongoing maintenance and knowledge transfer.</li>
+                            <li>Additionally, led system integration testing to verify compatibility and performance, ensuring high-quality deliverables.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <h3 class="job-title">Infosys (ZF Friedrichshafen) - Technology Analyst</h3>
+                        <div class="job-duration">05/2024 - 08/2024</div>
+                        <ul class="job-responsibilities">
+                            <li>Successfully participated in the migration from SAP BW to SAP BW/4HANA, gaining expertise in data warehousing concepts, SAP object transport creation, and thorough data verification.</li>
+                            <li>Actively learned and applied SCRUM framework principles as part of agile methodology, enhancing team collaboration and delivery efficiency.</li>
+                            <li>Delivered the migration of critical business time ensuring data integrity throughout the transition.</li>
+                            <li>Utilized tools such as GS, DE, SAP Business Client 800, Analysis for Office (AFO), and SAP Lumira to support development and reporting needs.</li>
+                            <li>Maintaining clear and professional communication in face-to-face and phone interactions.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <h3 class="job-title">Infosys (SpartanNash) - Technology Analyst</h3>
+                        <div class="job-duration">7/2023 - 05/2024</div>
+                        <ul class="job-responsibilities">
+                            <li>Collaborated closely with stakeholders to gather requirements using newly identified data pipelines, resulting in pipeline jobs that significantly reduced error rates and data gap duration.</li>
+                            <li>Optimized downstream processes by working with new key structures, enhancing overall data quality and efficiency.</li>
+                            <li>Maintained clear communication for project success effectively delivering, handing over, and closing all ongoing projects.</li>
+                            <li>Technologies used include Snowflake Data Warehouse, Snow SQL, Talend Studio, and Talend Management Console.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <h3 class="job-title">Infosys (SpartanNash) - Senior System Engineer</h3>
+                        <div class="job-duration">09/2022 - 07/2023</div>
+                        <ul class="job-responsibilities">
+                            <li>Actively monitored data pipelines using Talend Management Console to ensure proper operational and quality assurance client issues through effective ticket support.</li>
+                            <li>Developed and implemented new data pipeline jobs to meet evolving business needs.</li>
+                            <li>Performed routine server maintenance tasks such as backups and system health checks to maintain optimal performance.</li>
+                            <li>Provided mentorship to less experienced technical team engineers, enhancing team capacity.</li>
+                            <li>Tech used: Snowflake Warehouse, Snow SQL Studio, and Talend Management Console.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <h3 class="job-title">True Influence Aka. Anteriad - Senior Analyst</h3>
+                        <div class="job-duration">07/2020 - 08/2022</div>
+                        <ul class="job-responsibilities">
+                            <li>Effectively managed resources and assigned daily tasks to ensure smooth project execution.</li>
+                            <li>Led cross-platform integration efforts and quantitative forecasting processes to enhance data accuracy and operational efficiency.</li>
+                            <li>Analyzed data trends to generate reliable forecasts, and provided actionable insights.</li>
+                            <li>Developed user-friendly training materials to empower end users, Tech used: Power BI to automate data visualization, Outlook for forecast creation, and leveraged Google Drive, Google Sheets APIs, and Python for bulk file uploads to Google Cloud, significantly reducing redundancy.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <h3 class="job-title">True Influence Aka. Anteriad - Digital Media Planner</h3>
+                        <div class="job-duration">09/2018 - 07/2020</div>
+                        <ul class="job-responsibilities">
+                            <li>Developed and executed digital campaign strategies, managed publisher partnerships, and ensured high-quality lead generation and streamlined client communications using Salesforce Lightning.</li>
+                            <li>Developed targeted digital media strategies for diverse vertical campaigns.</li>
+                            <li>Monitored daily activities related to digital media campaigns, such as audience insights and click-through rates, to build insights.</li>
+                            <li>Tech used: Excel, Salesforce CRM, and the Clarizen project management tool.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Activities/Achievements</h2>
+                    <ul class="achievements-list">
+                        <li>Educational excellence award - 1st regional & under-19 national hockey merit - Awarded for 1st position in the Satavika Dehiwela games school competition</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Projects/Hobbies</h2>
+                    <ul class="projects-list">
+                        <li>Big Data Platform: Implemented using Python and SQL to create an event-based trigger that meets criteria.</li>
+                        <li>Home automation project based on Cloud IoT used ELF32 Wi-Fi module and Google Assistant for creating switches.</li>
+                        <li>IoT hardware programming on Raspberry Pi and Arduino boards and for creating switches.</li>
+                        <li>ESC, carbon credit calculation, and tokenization of credits on the IOTA blockchain.</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
